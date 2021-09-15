@@ -40,3 +40,28 @@ console.log(optionMatcher(first, y)); // false
 console.log(optionMatcher(first, y1)); // false
 console.log(optionMatcher(first, z)); // true
 console.log(optionMatcher(first, z1)); // false
+
+let x = 'simpson';
+let x1 = 'Simpson';
+let x2 = 'SIMpson';
+
+function convert(input: string): string {
+    if (!!input?.length) {
+        let firstLetter = input.slice(0,1).toUpperCase()
+        let restOfName = input.slice(1,input.length).toLocaleLowerCase();
+
+    return firstLetter + restOfName;
+
+    } else {
+        return '';
+    }
+}
+
+console.clear();
+console.log(convert(null));
+console.log(convert(''));
+console.log(convert('qw'));
+console.log(convert('a'));
+console.log(convert(x));
+console.log(convert(x1));
+console.log(convert(x2));
